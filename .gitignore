@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# Environment Variables (Secrets)
+.env
+
+# Database (Conflict se bachne ke liye)
+db.sqlite3
+
+# Media
+media/
