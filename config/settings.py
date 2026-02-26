@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.core',
     'apps.issues',
+    'apps.tenants',
     'apps.analytics',
     'drf_spectacular',
 ]
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -163,3 +165,10 @@ SPECTACULAR_SETTINGS = {
     # Senior ke liye nice touch:
     'CONTACT': {'name': 'CivicFlow Team', 'email': 'admin@civicflow.com'}, 
 }
+
+# config/settings.py
+
+# React ka URL allow karo
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+]
